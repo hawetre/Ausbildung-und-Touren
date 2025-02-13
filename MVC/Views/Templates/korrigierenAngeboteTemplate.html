@@ -1,0 +1,21 @@
+<table border="1"  rules="all" cellspacing="10" cellpadding="5" align="center" bgcolor="#ccffcc" width="70%" style="font-size:100%">
+    <tr bgcolor="#ffffcc">
+        <td colspan="3" align="center">{{ Titel }}<br>{{ Untertitel }}</td>
+    </tr>
+    <tr valign="middle">
+        <td valign="middle"><img src="Treffpunkt15x15.png" alt="Ort:">&nbsp{{ Ort }}</td><td valign="middle"><img src="Kalender15x15.png" alt="Termin:">&nbsp{{ Termin }}</td><td rowspan="3" align="center">{{ Name }}<br>{{ eMail }}</td>
+    </tr>
+    <tr valign="middle" bgcolor="#ffffcc">
+        <td valign="middle"><img src="Uhr15x15.png" alt="Zeit:">&nbsp{{ Zeit }}</td><td valign="middle"><img src="Teilnehmer15x15.png" alt="Teilnehmer:">&nbsp{{ Teilnehmerzahl }}</td>
+    </tr>
+    <tr valign="middle">
+        <td valign="middle"><img src="Preis15x15.png" alt="Kosten:">&nbsp{{ Kosten }}</td><td valign="middle"><img src="Anmeldschluss15x15.png" alt="Anmeldeschluss:">&nbsp{{ Anmeldeschluss }}</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td colspan="3" bgcolor="#ffffcc">Beschreibung:<br><textarea name="Beschreibung" cols="60" rows="4" wrap="Umbruch">{{ Beschreibung }}</textarea></td>
+    </tr>
+    <tr>
+        <td colspan="3">Web-Info:<br><textarea name="Web-Info" cols="60" rows="4" wrap="Umbruch">{{ Web-Info }}</textarea></td>
+    </tr>
+    {{ AendernKopieren }}
+</table>

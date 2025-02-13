@@ -1,0 +1,80 @@
+<form id="HomeAnmelden" class="cs-form cs-message" action="/index.php?Home=checkAnmeldung" method="post">
+
+    <table border="1"  rules="all" cellspacing="10" cellpadding="5" align="center" bgcolor="#ccffcc" style="font-size:125%">
+        <tr>
+            <th colspan="2" bgcolor="#ffffcc">anmelden{{ loginerrors }}</th>
+        </tr>
+        <tr bgcolor="#d8edcc">
+            <td><label for="Mailadresse">Mailadresse: </label></td>
+            <td><input type="text" id="Mailadresse" size="40" class="field Mailadresse" placeholder="vorname.nachname@dav-hagen.de" name="Mailadresse" id="eMail" style="font-size:80%" value="{{ MAILADRESSE }}">
+            <br>{{ ERROR_MAILADRESSE }}</td>
+        </tr>
+        <script>   
+            $("#Mailadresse").on("focusout",function() {
+                const ma = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if( !ma.test($("#Mailadresse").val())) {
+                    alert("\nKeine gültige Mailadresse!");
+                    return false;
+                }
+            });
+        </script>
+        <tr bgcolor="#d8edcc">
+            <td><label for="Mitgliedsnummer">Mitgliedsnummer: </label></td>
+            <td><input type="text" id="Mitgliedsnummer" size="15" class="field Mitgliedsnummer" placeholder="123/00/123456" name="Mitgliedsnummer" id="mitgliedsnummer" style="font-size:80%" value="{{ MITGLIEDSNUMMER }}">
+            <br>{{ ERROR_MITGLIEDSNUMMER }}</td>
+        </tr>
+        <script>   
+            //$("#Mitgliedsnummer").on("focusout",function() {
+            //    const mn = /\d\d\d\/\d\d\/\d\d\d\d\d\d/;
+            //    if( !mn.test($("#Mitgliedsnummer").val())) {
+            //        alert("\nKeine gültige Mitgliedsnummer!");
+            //        return false;
+            //    }
+            //});
+        </script>
+        <tr bgcolor="#d8edcc">
+            <td><label for="DAV Passwort">DAV Passwort: </label></td>
+            <td><input type="password" id="DAVPasswort" size="18" class="field DAVPasswort" placeholder="************" name="DAVPasswort" id="DAVPW" style="font-size:80%">
+            <br>{{ ERROR_PASSWORT }}</td>
+        </tr>
+        <script>   
+            //$("#Mitgliedsnummer").on("focusout",function() {
+            //    if($("#DAVPasswort").val().length < 12) {
+            //        alert("\nKein gültiges Passwort!");
+            //        return false;
+            //    }
+            //});
+        </script>
+        <tr>
+            <td colspan="2" bgcolor="#ffffcc" align="center"><input type="submit" id="anmelden" name="anmelden" style="font-size:70%"></td>
+        </tr>
+        <script>   
+            $("#anmelden").click(function() {
+                Fehler = false;
+                Meldung = "";
+                const ma = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if( !ma.test($("#Mailadresse").val())) {
+                    Meldung = "\nKeine gültige Mailadresse!",'bold sans';
+                    Fehler = true;
+                }
+                const mn = /\d\d\d\/\d\d\/\d\d\d\d\d\d/;
+                if( !mn.test($("#Mitgliedsnummer").val())) {
+                    Meldung = Meldung + "\nKeine gültige Mitgliedsnummer";
+                    Fehler = true;
+                }
+                if($("#DAVPasswort").val().length < 12) {
+                    Meldung = Meldung + "\nKein gültiges Passwort!";
+                    Fehler = true;
+                }
+                if(Fehler) {  
+                    alert(Meldung);          
+                    return false;
+                } else {
+                    return true;
+                }
+          });
+        </script>
+    </table>
+
+</form>
+

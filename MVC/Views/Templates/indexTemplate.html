@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+    <title>DAV Hagen - Ausbildung und Touren</title>
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- 	html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2011 -->
+    <!--<link rel="stylesheet" href="style.css" type="text/css" media="screen" /> -->
+    <style>
+    /* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
+/* html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2013 */
+
+/* reset */
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* render html5 elements as block 
+   rendert html5 elemente als block  */
+
+header, footer, content, menu { display: block;}
+
+body {
+background-color: #ccc;
+font-size: 0.95em;
+font-family: Arial, SunSans-Regular, Sans-Serif;
+color:#564b47;
+}
+pre, code {
+font-size: 1.3em;
+}
+a {color: #DB7093;}
+a:visited {color:#DB7093;}
+a:hover {color: #564b47;}
+a:active { color:#000000;}
+
+h1, h2 {
+font-size:1.8em;
+font-weight: normal;
+margin: 0 0 20px;
+}
+
+img.download {vertical-align:middle;}
+img{border:none;}
+
+	
+/* ----------container zentriert das layout-------------- */
+
+#container {
+max-width: 1170px;
+min-width:780px;
+margin:0  auto;
+background-color: #ffffff;
+}
+
+/* ----------header for logo-------------- */
+header {
+	padding:0;
+	background:#ccc ;
+}
+	
+header p{
+	text-transform:uppercase;
+	font-size:11px;
+
+}
+header img{ padding: 0 0 0px;}
+
+
+/* -------------- navigavtion------------- */
+
+nav {
+font-size: 16px;
+background: #564B47;
+color:#fff;
+}
+
+nav ul { 
+list-style-type: none; 
+margin:0;
+}
+
+nav li {
+display: inline;
+}
+
+nav a {
+display: inline-block;
+margin:0;
+color: #fff;
+border-right:1px solid #97827F;
+padding: 10px 50px;
+text-decoration: none;
+}
+nav a:visited {color:#fff;}
+
+nav a:hover {
+color: #ccc;
+}
+
+/*----------------- content---------------------*/
+section#content {
+margin: 0 0 0 0;
+}
+
+/* -------------- menu infos ------------- */
+
+menu {
+float: left;
+background-color: #D8EDCC;
+min-height:8000px;
+padding: 20px;
+width: 250px;
+}
+p, pre{
+padding:  0 0 20px;
+line-height:1.5em;
+}
+
+
+/* -------------- content infos ------------- */
+
+content {
+padding: 20px;
+float:center;
+/*width: 250px; */
+}
+content a{color:#FFF;}
+
+/* -----------footer--------------------------- */
+footer {
+padding: 20px;
+clear:both;
+background-color: #564B47;
+color:#fff;
+}
+</style>
+
+    <!-- by monorom -->
+</head>
+
+<body>
+    <div id="container">
+
+    <header>
+       <img src="LogoAusbildungUndTouren.png" alt="Ausbildung und Touren" width="100%">
+<!--        <img src="../../public/LogoAusbildungUndTouren.png" alt="Ausbildung und Touren" width="100%"> -->
+    </header>
+
+    <section id="menu">
+	    <menu>
+            {{ menue }}
+        </menu>
+    </section>
+    <!--<section id="content>"-->
+        <content>
+            <h3 align="center"><b>Ausbildungs- und Touren-Verwaltung</b></h3>
+            <p align="center">{{ content }}</p>
+        </content>
+    <!--</section>-->
+
+    <footer>		
+        {{ footer }}
+    </footer>
+    </div>
+</body>
+
+</html>

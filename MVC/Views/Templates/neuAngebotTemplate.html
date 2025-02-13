@@ -1,0 +1,56 @@
+<form class="cs-form cs-message" action="/index.php?eigene_Angebote=neu" method="post">
+    <table border="1"  rules="all" cellspacing="10" cellpadding="5" align="center" bgcolor="#ccffcc" width="60%" style="font-size:100%">
+    <tr>
+        <th>Attribut</th><th>Wert</th><th>Bemerkung</th>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td>Jahr</td><td><input type="hidden" name="PSJahr" value="{{ Jahr }}">{{ Jahr }}</td><td>des Angebots</td>
+    </tr>
+    <tr>
+        <td>Anbieter</td><td><input type="hidden" name="PSBenutzer" value="{{ PSBenutzer }}">{{ Benutzer }}</td><td>Trainer / Fachübungsleiter / Leiter / Organisator</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td>Titel</td><td><input type="text" name="Titel" value="{{ Titel }}"></td><td>Titel des Angebots</td>
+    </tr>
+    <tr>
+        <td>Untertitelitel</td><td><select><option>Gemeinschaftstour</option>
+            <option>Kommst’e mit</option>
+            <option>Klettern</option>
+            <option>Hüttentour</option>
+            <option>Hochtour</option>
+            </select></td><td></td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td><img src="Treffpunkt15x15.png" alt="Ort">&nbsp Ort</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Ort"></td><td>Ort, Kletterhalle, Klettergebiet oder Wandergebiet</td>
+    </tr>
+    <tr>
+        <td><img src="Kalender15x15.png" alt="Termin">&nbsp Termin</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Termin"></td><td>Datum zB.: 03.05.2024 oder 12.04.-14.04.2024 oder nach Vereinbarung</td>
+    </tr>
+    <tr valign="middle" bgcolor="#ffffcc">
+        <td><img src="Uhr15x15.png" alt="Zeit">&nbsp Zeit</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Zeit"></td><td>Uhrzeit z.B. 10:00 oder 09:30-16:30 oder nach Vereinbarung</td>
+    </tr>
+    <tr>
+        <td><img src="Teilnehmer15x15.png" alt="Teilnehmer">&nbsp Teilnehmerzahl</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Teilnehmerzeahl"></td><td>z.B. 2-6 oder 4 oder keine Begrenzung</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td><img src="Preis15x15.png" alt="Kosten">&nbspKosten&nbspMitglied</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Kosten_Mitglied"></td><td>z.B. 60 € oder 70,00€</td>
+    </tr>
+    <tr>
+        <td><img src="Preis15x15.png" alt="Kosten">&nbsp Nichtmitglied</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Kosten"></td><td>Wenn kein Unterschied zum Mitglied, dann den selben Betrag eintragen.</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td valign="middle"><img src="Anmeldschluss15x15.png" alt="Anmeldeschluss">&nbsp Anmeldeschluss</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Anmeldeschluss"></td><td>Datum: tt.mm.jjjj</td>
+    </tr>
+    <tr>
+        <td>Beschreibung:</td><td><textarea name="Beschreibung" cols="50" rows="4" wrap="Umbruch"></textarea></td><td>Beschreibung und Voraussetzungen dürfen zusammen nicht mehr als 87 Zeichen haben.</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td>Voraussetzungen:</td><td><textarea name="Voraussetzungen" cols="50" rows="4" wrap="Umbruch"></textarea></td><td>Beschreibung und Voraussetzungen dürfen zusammen nicht mehr als 87 Zeichen haben.</td>
+    </tr>
+    <tr>
+        <td>Web-Info:</td><td><textarea name="Web-Info" cols="50" rows="4" wrap="Umbruch"></textarea></td><td>Wird nur auf der Website der DAV-Sektion Hagen angezeigt.</td>
+    </tr>
+    <tr>
+        <td colspan="3" bgcolor="#ffffcc" align="center"><input type="submit" name="eintragen" style="font-size:70%"></td>
+    </tr>
+</table>

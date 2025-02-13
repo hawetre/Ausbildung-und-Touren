@@ -1,0 +1,59 @@
+<p align="center">{{ AuswaehlenEigenesAngebot }}</p>
+
+ <form action="/index.php?{{ ControlerAction }}" enctype="multipart/form-data" method="post">
+   <table border="1"  rules="all" cellspacing="10" cellpadding="5" align="center" bgcolor="#ccffcc" width="70%" style="font-size:100%">
+    <tr>
+        <th>Attribut</th><th>Wert</th><th>Bemerkung</th>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td>Jahr</td><td><input type="hidden" name="PSJahr" value="{{ Jahr }}">{{ Jahr }}
+                        <input type="hidden" name="PSAngebot" value="{{ PSAngebot }}"></td><td>des Angebots</td>
+    </tr>
+    <tr>
+        <td>Anbieter</td><td><input type="hidden" name="PSBenutzer" value="{{ PSBenutzer }}">{{ Benutzer }}<br>{{ eMail }}</td><td>Trainer / Fachübungsleiter / Leiter / Organisator</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td>Titel</td><td><input type="text" name="Titel" value="{{ Titel }}" size="60" maxlength="120"><br>{{ ERROR_Titel }}</td><td>Titel des Angebots</td>
+    </tr>
+    <tr>
+        <td>Untertitel</td><td><select name="Untertitel"><option>Gemeinschaftstour</option>
+            <option {{ Kommste_mit }}>Kommst’e mit</option>
+            <option {{ Klettern }}>Klettern</option>
+            <option {{ Hüttentour }}>Hüttentour</option>
+            <option {{ Hochtour }}>Hochtour</option>
+            <option {{ Klettersteig }}>Klettersteig</option>
+            </select></td><td></td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td><img src="Treffpunkt15x15.png" alt="Ort">&nbspOrt</td><td><input type="text" size="60" maxlength="120" name="Ort" value="{{ Ort }}"><br>{{ ERROR_Ort }}</td><td>Ort, Kletterhalle, Klettergebiet oder Wandergebiet</td>
+    </tr>
+    <tr>
+        <td><img src="Kalender15x15.png" alt="Termin">&nbspTermin</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Termin" value="{{ Termin }}"><br>{{ ERROR_Termin }}</td><td>Format: dd.mm.jj oder dd.mm. - dd.mm.jj<br>zweistellig: dd = Tag, mm = Monat, jj = Jahr</td>
+    </tr>
+    <tr valign="middle" bgcolor="#ffffcc">
+        <td><img src="Uhr15x15.png" alt="Zeit">&nbspZeit</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Zeit" value="{{ Uhrzeit }}">&nbspBsp: 10 Uhr, 12:30 Uhr, 6 h<br>{{ ERROR_Uhrzeit }}</td><td>Angabe der Uhrzeit hh:mm (mit Uhr) / Angabe der Dauer hh (mit h) / Tagesetappen / Tagestouren</td>
+    </tr>
+    <tr>
+        <td><img src="Teilnehmer15x15.png" alt="Teilnehmer">&nbspTeilnehmerzahl</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Teilnehmerzahl" value="{{ Teilnehmerzahl }}"><br>{{ ERROR_Teilnehmerzahl }}</td><td>nur Zahl z.B. 6, 4-6, für beliebieg viele 99 (ohne Personen)</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td><img src="Preis15x15.png" alt="Kosten">&nbspKosten&nbspMitglied</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Kosten_Mitglied" value="{{ Kosten_Mitglied }}"><br>{{ ERROR_Kosten_Mitglied }}</td><td>Eingabe ohne „€“-Zeichen; für Gemeinschaftstouren "entfällt"</td>
+    </tr>
+    <tr>
+        <td><img src="Preis15x15.png" alt="Kosten">&nbspNichtmitglied</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Kosten" value="{{ Kosten }}"><br>{{ ERROR_Kosten }}</td><td>Wenn kein kein Kostenunterschied zum Mitglied besteht, dann bleibt dieses Feld leer</td>
+    </tr>
+    <tr bgcolor="#ffffcc">
+        <td valign="middle"><img src="Anmeldschluss15x15.png" alt="Anmeldeschluss">&nbspAnmeldeschluss</td><td><input type="text" size="Länge" maxlength="MaxLänge" name="Anmeldeschluss" value="{{ Anmeldeschluss }}"><br>{{ ERROR_Anmeldeschluss }}</td><td>Format: dd.mm.jj</td>
+    </tr>
+    <tr>
+        <td>Beschreibung:</td><td><textarea name="Beschreibung" cols="60" rows="14" wrap="Umbruch">{{ Beschreibung }}</textarea><br>{{ ERROR_Beschreibung }}</td><td>Die Beschreibung kann abschließend das Wichtigste zu Voraussetzungen in Kurzform enthalten. Eingeleitet mit Voraussetzung:. Zusammen darf der Text mit Leerzeichen nicht mehr als 840 eichen betragen.</td>
+    </tr>
+    <tr>
+        <td>Web-Info:</td><td><textarea name="Web-Info" cols="60" rows="10" wrap="Umbruch">{{ Web-Info }}</textarea><br>{{ ERROR_Web-Info }}<br>
+            <label for="myfile">Bild-Datei wählen:</label><input name="Datei" type="file" size="50" maxlength="3000000" accept="image/*"></td>
+        <td>Wird nur auf der Website der DAV-Sektion Hagen angezeigt.<br>Es kann dazu eine Bild-Datei geladen werden in den Formaten 'png' und 'jpg'. Die maximale Dateigröße beträgt 3 MB.</td>
+    </tr>
+    <tr>
+        <td colspan="3" bgcolor="#ffffcc" align="center"><input type="submit" name="kopieren" value="kopieren" style="font-size:85%"></td>
+    </tr>
+</table>

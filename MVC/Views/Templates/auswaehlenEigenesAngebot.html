@@ -1,0 +1,17 @@
+<form  action="/index.php?{{ Controler }}={{ Action }}" method="post">
+
+    <table border="1"  rules="all" cellspacing="10" cellpadding="5" align="center" bgcolor="#ccffcc" style="font-size:100%">
+        <tr>
+            <th colspan="2" bgcolor="#ffffcc">eigenes Angebot auswählen und "{{ Action }}" klicken</th>
+        </tr>
+        <tr bgcolor="#d8edcc">
+            <td align="center">
+                <select size="1" name="eigenesAngebot">
+                {{ option }}
+                </select>
+            </td>
+            <td align="center"><input type="submit" name="auswaehlen" value="{{ Action }}" style="font-size:80%"></td>
+        </tr>
+    </table>
+
+</form>

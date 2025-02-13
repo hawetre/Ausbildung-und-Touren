@@ -1,0 +1,128 @@
+/* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
+/* html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2013 */
+
+/* reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* render html5 elements as block 
+   rendert html5 elemente als block  */
+
+header, footer, content, menu { display: block;}
+
+body {
+background-color: #ccc;
+font-size: 0.95em;
+font-family: Arial, SunSans-Regular, Sans-Serif;
+color:#564b47;
+}
+pre, code {
+font-size: 1.3em;
+}
+a {color: #DB7093;}
+a:visited {color:#DB7093;}
+a:hover {color: #564b47;}
+a:active { color:#000000;}
+
+h1, h2 {
+font-size:1.8em;
+font-weight: normal;
+margin: 0 0 20px;
+}
+
+img.download {vertical-align:middle;}
+img{border:none;}
+
+	
+/* ----------container zentriert das layout-------------- */
+
+#container {
+max-width: 1170px;
+min-width:780px;
+margin:0  auto;
+background-color: #ffffff;
+}
+
+/* ----------header for logo-------------- */
+header {
+	padding:0;
+	background:#ccc ;
+}
+	
+header p{
+	text-transform:uppercase;
+	font-size:11px;
+
+}
+header img{ padding: 0 0 0px;}
+
+
+/* -------------- navigavtion------------- */
+
+nav {
+font-size: 16px;
+background: #564B47;
+color:#fff;
+}
+
+nav ul { 
+list-style-type: none; 
+margin:0;
+}
+
+nav li {
+display: inline;
+}
+
+nav a {
+display: inline-block;
+margin:0;
+color: #fff;
+border-right:1px solid #97827F;
+padding: 10px 50px;
+text-decoration: none;
+}
+nav a:visited {color:#fff;}
+
+nav a:hover {
+color: #ccc;
+}
+
+/* ----------------- content--------------------- 
+section#content {
+margin: 0 0 0 0;
+}
+
+/* -------------- menu infos ------------- */
+
+menu {
+float: left;
+background-color: #D8EDCC;
+min-height:600px;
+padding: 20px;
+width: 274px;
+}
+p, pre{
+padding:  0 0 20px;
+line-height:1.5em;
+}
+
+
+/* -------------- content infos ------------- */
+
+content {
+padding: 20px;
+/*float:center;
+/*width: 250px; */
+}
+content a{color:#FFF;}
+
+/* -----------footer--------------------------- */
+footer {
+padding: 20px;
+clear:both;
+background-color: #564B47;
+color:#fff;
+}

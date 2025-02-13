@@ -1,0 +1,21 @@
+    <form class="cs-form cs-message" action="/index.php?alleAngebote=anzeigen" method="post">
+
+        <table border="1"  rules="all" cellspacing="10" cellpadding="5" align="center" bgcolor="#ccffcc" style="font-size:125%">
+            <tr>
+                <th bgcolor="#ffffcc">Auswahl Jahr</th><th bgcolor="#ffffcc"></th>
+            </tr>
+            <tr bgcolor="#d8edcc">
+                <td>
+                    <select name="jahr" size="1">
+                        {{ option }}
+                        <option value="{{ Jahr }}" {{ selected }}> {{ Jahr }}</option>
+                        <option {{ value }}>Michael Jackson</option>
+                        <option selected>Tom Waits</option>
+                        <option>Nina Hagen</option>
+                        <option>Marianne Rosenberg</option>
+                        </select>
+                </td>
+                <td colspan="2" bgcolor="#ffffcc" align="center"><input type="submit" name="anzeigen" value="anzeigen" style="font-size:70%"></td>
+            </tr>
+        </table>
+    
